@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Responsive Cake webpage</title>
+    <!-- Bootstrap's css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- My own css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- the header is full width (container-fluid), with display flex (d-flex) and 
+    flex-direction column (flex-column) that when the device is laptop and bigger, 
+    is column-reverse so that the navbar comes below the header (flex-lg-column-reverse). 
+    Overflow hidden so that when the menu is opened on mobile, we don't see the header 
+    content coming down (overflow-hidden). And lastly, a margin bottom of 4. (mb-4) -->
+
+    <header
+      class="container-fluid d-flex flex-column flex-lg-column-reverse overflow-hidden mb-4"
+    >
+      <!-- a navbar (navbar) in form of hamburger menu that expands on laptop or larger
+      devices (navbar-expand-lg) with dark text that looks good on light background 
+      (navbar-light) and that it will act as a container-fluid in small screens, but
+      in laptops or bigger it will be just a container (container-lg) -->
+      <nav class="navbar navbar-expand-lg navbar-light container-lg">
+        <!-- a container (container-fluid) for the hamburger icon on small devices and 
+        for the items in the menu on bigger screens, where we are aligning the 
+        elements to the right side (justify-content-end) -->
+        <div class="container-fluid justify-content-end">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- a div where we are putting all the items that should hide in the hamburger
+          menu on small devices (collapse) -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- a list of the items of the menu with margin bottom of 2 for small devices (mb-2) and
+            no margin bottom for laptop and larger devices (mb-lg-0) -->
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section
+        class="row justify-content-between align-items-baseline mb-lg-3 py-3"
+      >
+        <div class="col-4">
+          <img
+            src="https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+            alt=""
+          />
+        </div>
+        <div class="col-7">
+          <h3>The best cakes in town delivered to your door</h3>
+        </div>
+      </section>
+    </header>
+
+    <!-- a section with a container that is not full width (container) and the class "welcome"
+    to be able to style the images inside it from the css, and lastly a margin bottom of 5
+    for all devices, since I'm not specifying any breakpoints (mb-5) -->
+    <section class="container welcome mb-5">
+      <!-- a row wrapper to be able to use bootstrap columns inside (row) and which for
+        laptop and larger devices it will show the elements in the opposite order so
+        that they match the order of the layout, meaning, in small devices it should
+        show image and then text, and in larger devices the text and then the image
+        (flex-lg-row-reverse) -->
+      <div class="row flex-lg-row-reverse">
+        <!-- a column of 12 (full width) which will be 50% of the width in laptop and bigger
+        devices (col-lg-6) and with a margin bottom of 4 for all devices (mb-4) -->
+        <div class="col-12 col-lg-6 mb-4">
+          <h1>Welcome</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+            quod odit culpa illum id, nulla maxime, veritatis doloribus,
+            nesciunt consequatur soluta autem non provident porro. Perferendis
+            exercitationem doloribus commodi corrupti?
+          </p>
+        </div>
+
+        <!-- a column of 12 (full width) which will be 50% of the width in laptop and bigger
+        devices (col-lg-6) -->
+        <div class="col-12 col-lg-6">
+          <img
+            src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- a section with a container that is not full width (container) and the class "collage"
+    to be able to style the images inside it from the css, and lastly a margin bottom of 5
+    for all devices, since I'm not specifying any breakpoints (mb-5) -->
+    <section class="container collage mb-5">
+      <!-- a row wrapper to be able to use bootstrap columns inside (row) with a vertical 
+        separation between the elements inside of 3 (gy-3) -->
+      <div class="row gy-3">
+        <!-- a column of 50% of the width in small devices (col-6) and 25% of the width in 
+        laptop or larger devices -->
+        <div class="col-6 col-sm-3">
+          <img
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"
+            alt=""
+          />
+        </div>
+
+        <div class="col-6 col-sm-3">
+          <img
+            src="https://images.unsplash.com/photo-1562440499-64c9a111f713?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"
+            alt=""
+          />
+        </div>
+
+        <div class="col-6 col-sm-3">
+          <img
+            src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+            alt=""
+          />
+        </div>
+
+        <div class="col-6 col-sm-3">
+          <img
+            src="https://images.unsplash.com/photo-1627834377411-8da5f4f09de8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+            alt="  "
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- a full width footer (container-fluid) with a top and bottom padding of 4 for all
+    devices (py-4) -->
+    <footer class="container-fluid py-4">
+      <p>Text 1</p>
+      <p>Text 2</p>
+      <p>Text 3</p>
+
+      <!-- the class "text-center" for centering the text -->
+      <h4 class="text-center">Made by Anandamaya Arno</h4>
+    </footer>
+
+    <!-- Bootstrap's Javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

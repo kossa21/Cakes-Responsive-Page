@@ -1,4 +1,4 @@
-/*  Add your styling here */
+/* header styles */
 header {
   background-color: pink;
 }
@@ -6,12 +6,18 @@ header {
 header img {
   width: 100%;
   height: 180px;
+  /* we use object-fit cover for the images not to stretch if the size is bigger than expected */
   object-fit: cover;
 }
 
+/* Welcome section styles  */
 .welcome img {
+  /* we are making the images take a width of 100% of the parent's size, so that it will
+  fit to the size of the column given by bootstrap */
   width: 100%;
 }
+
+/* Collage section styles  */
 
 .collage img {
   width: 100%;
@@ -19,15 +25,17 @@ header img {
   object-fit: cover;
 }
 
+/* Footer styles */
 footer {
   background-color: pink;
 }
 
-/* tablet styles */
+/* ------------------------------ tablet styles ------------------------------ */
 @media screen and (min-width: 540px) {
+  /* No styles for tablet */
 }
 
-/* laptop styles */
+/* ------------------------------ laptop styles ------------------------------ */
 @media screen and (min-width: 900px) {
   header {
     background-color: #fff;
@@ -36,6 +44,10 @@ footer {
   header section {
     background-color: pink;
   }
+
+  /* I'm using this selector to refer to the navbar, with all the classes 
+  the navbar has, because if I don't use it with this level of specificity, 
+  my styles will not overwrite the CSS from Bootstrap */
   nav.navbar.navbar-expand-lg.navbar-light.container-lg {
     background-color: pink;
   }
