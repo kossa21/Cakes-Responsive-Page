@@ -1,3 +1,8 @@
+This is an exercise for practicing responsive layouts, in my case using Bootstrap. 
+
+You can see it live here: https://kossa21.github.io/Cakes-Responsive-Page/
+
+
 # Cakes Co
 
 The aim of this exercise is to create a **responsive webpage** showcasing your cake business.
